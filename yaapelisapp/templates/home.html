@@ -1,0 +1,29 @@
+{% extends "layout/base.html" %}
+{% block content%}
+<form method="POST" class="d-flex justify-content-center p-4 gap-2">
+  {% csrf_token %}
+  <input type="text" name="movie_name" id="movie_name" class="w-50 px-2 form-control search_background" placeholder="Buscador">
+
+  <button type="submit" class="btn btn-secondary fw-normal text-light">Search</button>
+</form>
+
+
+<div class="row m-2 d-flex justify-content-center  gap-4 ">
+  {{error}}
+    {% for movie in movies %}
+    <div class="card m-0 p-0 border-0" style="width:16rem; ">
+        <a href="{% url 'details' movie.id%}" class="spectrum-a">
+          <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body bg-dark text-light">
+          <h5 class="card-title">
+            {{movie.original_title}}
+          </h5>
+          <p>
+            {{movie.release_date}}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}

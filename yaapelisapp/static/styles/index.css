@@ -1,0 +1,56 @@
+.background_orange {
+    background-color: #dd4b11;
+}
+
+.search_background {
+    background-color: #e96835;
+   
+}
+
+circle {
+    fill: none;
+    stroke: #5e5e5f;
+    stroke-width: 5;
+    transform-origin: 50%;
+    transform: rotate(-90deg);
+    stroke-dasharray: 100 100;
+}
+
+
+circle:nth-child(2){
+    stroke-dasharray: var(--porcentaje) 100;
+    stroke: #07bd43;
+    
+}
+
+.container_progres {
+    position: relative;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #171322;
+}
+
+
+
+.container_progres h4 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 8px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; 
+}
+
+.container_progres h4 span {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+
+
