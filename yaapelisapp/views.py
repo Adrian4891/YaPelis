@@ -29,7 +29,8 @@ def home_page(request):
             })
     else:
         try:
-            response = requests.get(f'{api_url}/search/movie?query={request.POST['movie_name']}&api_key={api_key}')
+            movie_name = request.POST['movie_name']
+            response = requests.get(f'{api_url}/search/movie?query={movie_name}&api_key={api_key}')
             movies = response.json()
             return render(request, "home.html", {
               "movies": movies["results"]
