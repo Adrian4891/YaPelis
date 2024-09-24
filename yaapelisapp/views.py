@@ -4,13 +4,13 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 import requests
 import math
-import environ
-env = environ.Env()
-environ.Env.read_env()
+import os
+
 
 # Create your views here.
 api_url = "https://api.themoviedb.org/3"
-api_key = env.str('API_KEY')
+api_key = os.environ.get('API_KEY'),
+
 
 def home_page(request):
     if request.method == 'GET':
