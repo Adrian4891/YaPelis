@@ -9,7 +9,7 @@ import os
 
 # Create your views here.
 api_url = "https://api.themoviedb.org/3"
-api_key = os.environ.get('API_KEY'),
+api_key = os.environ.get('API_KEY')
 
 
 def home_page(request):
