@@ -1,10 +1,10 @@
 {% extends "layout/base.html" %}
 {% block content %}
 <main class="container">
-    <div class="row pt-3">
+    <div class="row pt-4">
         <div class="col-md-6 offset-md-4">
             {{error}}
-            <form method="POST">
+            <form method="POST" class="text-light">
                 {% csrf_token %}
                 <div class="mb-3">
                     <label for="username" class="form-label">User Name</label>
@@ -23,9 +23,11 @@
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Register</button>
               </form>
+              <p class="text-light mt-2">Ya tienes cuenta? <a class="d-inline nav-link text-primary" href="{% url 'signin' %}">Signin</a></p>
         </div>
+
     </div>
 </main>
 
