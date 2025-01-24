@@ -1,10 +1,15 @@
+body {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .background_orange {
     background-color: #dd4b11;
 }
 
 .search_background {
-    background-color: #e96835;
-   
+    background-color: #e96835; 
 }
 
 circle {
@@ -19,8 +24,7 @@ circle {
 
 circle:nth-child(2){
     stroke-dasharray: var(--porcentaje) 100;
-    stroke: #07bd43;
-    
+    stroke: #07bd43;    
 }
 
 .container_progres {
@@ -29,8 +33,6 @@ circle:nth-child(2){
     border-radius: 50%;
     background-color: #171322;
 }
-
-
 
 .container_progres h4 {
     font-size: 25px;
