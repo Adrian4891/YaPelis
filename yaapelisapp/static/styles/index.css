@@ -54,5 +54,14 @@ circle:nth-child(2){
     color: #ffffff;
 }
 
+.img_lg {
+    width: 19rem; 
+    height: 34rem;
+}
+
+@media (max-width:768px) {
+    
+}
+
 
 
